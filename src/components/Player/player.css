@@ -7,6 +7,11 @@
   margin: auto 0;
   outline: none;
 }
+
+.title {
+  color: #ffd692;
+}
+
 @keyframes glow {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
@@ -20,13 +25,23 @@
 }
 
 .player {
-  width: 300px;
-  height: 400px;
-  background: #0d2531;
+  width: 250px;
+  height: 25%;
+  background: #0d2531cc;
   border: 3px solid #ffd692;
   border-radius: 12px;
   box-shadow: 0px 0px 20px 5px #ffd692;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  transform: scale3d(1, 1, 1);
+  transition: all 0.7s ease-in-out;
+}
+
+.step-back {
+  transform: scale3d(0.6, 0.6, 0.8);
+  box-shadow: none;
+  transition: all 0.7s ease-in-out;
+  border: none;
 }

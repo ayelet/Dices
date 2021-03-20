@@ -8,8 +8,9 @@ class Player extends Component {
   }
   render() {
     return (
-      <div className="player card">
-        <div className="score">{this.props.score}</div>
+      <div className={`player card ${this.props.classname}`}>
+        <h1 className="title">{this.props.name}</h1>
+        <div className={`score`}>{this.props.score}</div>
       </div>
     );
   }
