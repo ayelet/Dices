@@ -27,7 +27,6 @@ class Board extends Component {
           <button className="btn primary-btn" onClick={this.rollDice}>
             Roll
           </button>
-          <p>{this.state.diceScore}</p>
         </div>
       </div>
     );

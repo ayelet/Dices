@@ -1,5 +1,6 @@
 .board {
-  background: url("../../img/lunar-landscape-2308000_1920.jpg");
+  background: url("../../img/lunar-landscape-2308000_1920.jpg") no-repeat center
+    center/cover;
   width: 100vw;
   height: 100vh;
 }
