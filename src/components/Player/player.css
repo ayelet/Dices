@@ -1,0 +1,32 @@
+.score {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 92px;
+  color: #ffd692;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+  margin: auto 0;
+  outline: none;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+.player {
+  width: 300px;
+  height: 400px;
+  background: #0d2531;
+  border: 3px solid #ffd692;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px 5px #ffd692;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
