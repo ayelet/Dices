@@ -9,7 +9,7 @@ class Player extends Component {
   render() {
     return (
       <div className="player card">
-        <div className="score">0</div>
+        <div className="score">{this.props.score}</div>
       </div>
     );
   }

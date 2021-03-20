@@ -3,4 +3,26 @@
     center/cover;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.btn {
+  width: 200px;
+  height: 80px;
+  margin: 12px;
+}
+
+.dice-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.current-score {
+  font-size: 44px;
+  color: white;
 }
