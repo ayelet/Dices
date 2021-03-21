@@ -51,7 +51,7 @@ body {
   position: absolute;
   width: 80%;
   height: 80%;
-  left: calc(50% - width / 2);
+  left: 50px;
   top: 20px;
 
   color: var(--textColor);
@@ -127,10 +127,6 @@ body {
     text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
       0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
-}
-
-/* //////////////////////////////// */
-.card {
 }
 
 .control {
