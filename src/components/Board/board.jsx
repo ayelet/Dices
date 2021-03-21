@@ -136,6 +136,7 @@ class Board extends Component {
   };
 
   renderGameOver() {
+    console.log("Rendering game over", this.state.gameOver);
     if (!this.state.gameOver) return null;
     let winner = this.state.players[this.state.playerTurn].name;
     return (
@@ -150,60 +151,62 @@ class Board extends Component {
 
   render() {
     return (
-      <div
-        className={
-          this.state.newGame || this.state.gameOver ? "board-grayed" : "board"
-        }
-      >
-        {this.renderGameOver}
-        <div className="control">
-          <button className="btn1 glow" onClick={this.rollDice}>
-            Roll
-          </button>
-          <button className="btn1 glow" onClick={this.bank}>
-            Bank
-          </button>
-          <input
-            className="btn1 btn2 glow"
-            type="number"
-            value={this.state.winThreshold}
-            onChange={this.setWinThreshold}
-          />
-          <button className="btn1 glow" onClick={this.newGame}>
-            New Game
-          </button>
-        </div>
+      <React.Fragment>
+        {this.renderGameOver()}
+        <div
+          className={
+            this.state.newGame || this.state.gameOver ? "board-grayed" : "board"
+          }
+        >
+          <div className="control">
+            <button className="btn1 glow" onClick={this.rollDice}>
+              Roll
+            </button>
+            <button className="btn1 glow" onClick={this.bank}>
+              Bank
+            </button>
+            <input
+              className="btn1 btn2 glow"
+              type="number"
+              value={this.state.winThreshold}
+              onChange={this.setWinThreshold}
+            />
+            <button className="btn1 glow" onClick={this.newGame}>
+              New Game
+            </button>
+          </div>
 
-        <div className="players">
-          {this.state.players.map((player, i) => {
-            return (
-              <Player
-                key={this.state.players[i].name}
-                name={this.state.players[i].name}
-                score={this.state.players[i].totalScore}
-                classname={i === this.state.playerTurn ? "" : "step-back"}
-              />
-            );
-          })}
-        </div>
-        <div className="dice-container">
-          <Dice
-            name={this.getDiceClassName(0)}
-            face={this.state.dices[0].score}
-          />
-          <Dice
-            name={this.getDiceClassName(1)}
-            face={this.state.dices[1].score}
-          />
-        </div>
-        <div className="score-container">
-          <div className="card current-score">
-            {this.state.players[this.state.playerTurn].name +
-              " current Score: " +
-              this.state.currentScore}
+          <div className="players">
+            {this.state.players.map((player, i) => {
+              return (
+                <Player
+                  key={this.state.players[i].name}
+                  name={this.state.players[i].name}
+                  score={this.state.players[i].totalScore}
+                  classname={i === this.state.playerTurn ? "" : "step-back"}
+                />
+              );
+            })}
+          </div>
+          <div className="dice-container">
+            <Dice
+              name={this.getDiceClassName(0)}
+              face={this.state.dices[0].score}
+            />
+            <Dice
+              name={this.getDiceClassName(1)}
+              face={this.state.dices[1].score}
+            />
+          </div>
+          <div className="score-container">
+            <div className="card current-score">
+              {this.state.players[this.state.playerTurn].name +
+                " current Score: " +
+                this.state.currentScore}
+            </div>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

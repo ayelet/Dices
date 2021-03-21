@@ -32,20 +32,15 @@ body {
   transition: all 1.5s ease-out;
 }
 .board-grayed {
-  background: #000f;
+  /* background: #000f; */
   transition: all 1.5s ease-out;
+  display: none;
 }
 
-.board-grayed * {
-  background: #000f;
-  animation: none;
-  transition: all 1.5s ease-out;
-}
-
-.board-grayed ~ {
-  background: #0004;
-  animation: none;
-  transition: all 1.5s ease-out;
+.board-grayed .players,
+.board-grayed .control,
+.board-grayed .dice-container {
+  display: none;
 }
 .game-over {
   position: absolute;
@@ -53,7 +48,8 @@ body {
   height: 80%;
   left: 50px;
   top: 20px;
-
+  text-align: center;
+  font-size: 92px;
   color: var(--textColor);
   background: var(--backgroundColor);
 }
