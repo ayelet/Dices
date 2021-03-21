@@ -155,6 +155,7 @@ class Board extends Component {
           this.state.newGame || this.state.gameOver ? "board-grayed" : "board"
         }
       >
+        {this.renderGameOver}
         <div className="control">
           <button className="btn1 glow" onClick={this.rollDice}>
             Roll
